@@ -176,5 +176,11 @@
     "test": "datasets/state_patrol/state_patrol_test.json",
     "pipe": "datasets/state_patrol/state_patrol_load.json",
     "type": "csv"
+  },
+  "crypto-market": {
+    "path": "datasets/crypto-market/cryptotoken_full.csv",
+    "test": "",
+    "pipe": "datasets/crypto-market/pipeline.json",
+    "type": "csv"
   }
 }

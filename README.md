@@ -10,7 +10,7 @@ The aim of this tool is to compare several frameworks who manage DataFrames on c
 
 ## Run an Algorithm
 
-The command `python run_algorithm.py --algorithm <algorithm_name> --dataset <dataset_name>` will run an algorithm on the specified dataset. By default, an algorithm runs inside its Docker container. If you want to run it locally, add the parameter `--locally`.
+The command `python run_algorithm.py --algorithm <algorithm_name> --dataset <dataset_name> --locally` will run an algorithm on the specified dataset. By default, an algorithm runs inside its Docker container. If you want to run it locally, add the parameter `--locally`.
 
 The results of a run are stored in `results/<dataset_name>/<algorithm_name>.csv`.
 
