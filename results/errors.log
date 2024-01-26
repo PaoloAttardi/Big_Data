@@ -1,0 +1,3 @@
+2024-01-26 13:44:29 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - PandasBench.round() got an unexpected keyword argument 'column'
+2024-01-26 13:45:04 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - PandasBench.round() got an unexpected keyword argument 'f'
+2024-01-26 13:46:50 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - 'str' object cannot be interpreted as an integer

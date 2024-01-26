@@ -1,0 +1,53 @@
+{
+    "input": [{
+        "method": "load_dataset",
+        "input": {
+            "sep": ","
+        }
+    }, 
+    {
+        "method": "force_execution",
+        "input":{}
+    }],
+    "EDA": [
+        {
+            "method": "force_execution",
+            "input":{}
+        }
+    ],
+    "data_transformation":[
+        {
+            "method": "split",
+            "input": {
+                "column": "Symbol",
+                "sep": "USDT",
+                "splits": "-1",
+                "col_names": "Token"
+            }
+        },
+        {
+            "method": "force_execution",
+            "input":{}
+        }
+    ],
+    "data_cleaning":[
+        {
+            "method": "round",
+            "input":{
+                "columns": "Volume USDT",
+                "n": "0"
+            }
+        },
+        {
+            "method": "force_execution",
+            "input":{}
+        }
+    ],
+    "output":[
+        {
+            "method": "force_execution",
+            "input":{}
+        }
+    ]
+
+}
