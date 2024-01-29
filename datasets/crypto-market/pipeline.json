@@ -34,14 +34,27 @@
         {
             "method":"cast_columns_types",
             "input":{
-                "dtypes":{"Volume USDT":"float"}
+                "dtypes":{"Volume USDT":"int"}
             }
         },
         {
             "method": "round",
             "input":{
                 "columns": "Volume USDT",
-                "n": "0"
+                "n": 0
+            }
+        },
+        {
+            "method":"cast_columns_types",
+            "input":{
+                "dtypes":{"Volume USDT":"float"}
+            }
+        },
+        {
+            "method":"change_date_time_format",
+            "input":{
+                "column":"Date",
+                "format":"r'/d{4}-/d{2}-/d{2} /d{2}:/d{2}:/d{2}'"
             }
         },
         {
