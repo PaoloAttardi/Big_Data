@@ -3,18 +3,17 @@
         "method": "load_dataset",
         "input": {
             "sep": ","
+        },
+        "input_dask": {
+            "sep": ",",
+            "assume_missing": "True",
+            "dtype": "object"
         }
     }, 
     {
         "method": "force_execution",
         "input":{}
     }],
-    "EDA": [
-        {
-            "method": "force_execution",
-            "input":{}
-        }
-    ],
     "data_transformation":[
         {
             "method": "split",
@@ -34,7 +33,7 @@
         {
             "method":"cast_columns_types",
             "input":{
-                "dtypes":{"Volume USDT":"int"}
+                "dtypes":{"Volume USDT":"float"}
             }
         },
         {
@@ -47,7 +46,7 @@
         {
             "method":"cast_columns_types",
             "input":{
-                "dtypes":{"Volume USDT":"float"}
+                "dtypes":{"Volume USDT":"int"}
             }
         },
         {
@@ -55,6 +54,39 @@
             "input":{
                 "column":"Date",
                 "format":"r'/d{4}-/d{2}-/d{2} /d{2}:/d{2}:/d{2}'"
+            }
+        },
+        {
+            "method":"replace",
+            "input":{
+                "columns": "Date",
+                "to_replace": ".000",
+                "value": "",
+                "regex": false
+            }
+        },
+        {
+            "method": "force_execution",
+            "input":{}
+        }
+    ],
+    "EDA": [
+        {
+            "method": "locate_null_values",
+            "input": {
+                "column": "all"
+            }
+        },
+        {
+            "method": "is_unique",
+            "input":{
+                "column": "Token"
+            }
+        },
+        {
+            "method": "is_unique",
+            "input":{
+                "column": "Symbol"
             }
         },
         {
