@@ -310,8 +310,8 @@ class DataTableBench(AbstractAlgorithm):
                         arr = [f'1970-01-01 {i}' for i in self.df_[column].to_list()[0]]
                         arr = [datetime.datetime.strptime(i, '%Y-%m-%d %H:%M:%S') for i in arr]
                         self.df_[column] = np.array(arr)
-                else:
-                    self.df_[column] = dtype
+            else:
+                self.df_[column] = dtype
                 
         return self.df_
 

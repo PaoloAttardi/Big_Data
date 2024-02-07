@@ -39,6 +39,10 @@
         {
             "method": "round",
             "input":{
+                "columns": ["Volume USDT"],
+                "n": 0
+            },
+            "input_pandas":{
                 "columns": "Volume USDT",
                 "n": 0
             }
@@ -59,6 +63,12 @@
         {
             "method":"replace",
             "input":{
+                "columns": ["Date"],
+                "to_replace": ".000",
+                "value": "",
+                "regex": false
+            },
+            "input_pandas":{
                 "columns": "Date",
                 "to_replace": ".000",
                 "value": "",
