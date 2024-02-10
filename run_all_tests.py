@@ -7,7 +7,7 @@ algorithms = [
     'datatable', 
     'polars', 
     'modin_ray', 
-    'modin_dask'
+    'modin_dask',
     'pyspark_pandas', 
     'spark', 
     'vaex'
@@ -19,7 +19,7 @@ algorithms = [
 # parts = parts[:4]
 
 save_output_results = False
-max_num_tests = 3
+max_num_tests = 2
 modes = [''] #, '--pipeline-step', '--pipeline']   # the first is for core execution (default)
 
 total_nruns = len(algorithms) * len(modes) * max_num_tests

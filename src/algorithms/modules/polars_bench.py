@@ -171,7 +171,7 @@ class PolarsBench(AbstractAlgorithm):
         Check the uniqueness of all values contained in the provided column_name
         :param column column to check
         """
-        return self.df_[column].is_unique().all()
+        return self.df_.select(column).unique()
 
     @timing
     def delete_columns(self, columns):
@@ -316,7 +316,9 @@ class PolarsBench(AbstractAlgorithm):
             elif dtypes[c] in [pl.Date, pl.Datetime, pl.Time]:
                 self.df_ = self.df_.with_column(pl.col(c).str.strptime(dtypes[c], strict=False).keep_name())
             else:
-                self.df_ = self.df_.with_column(pl.col(c).cast(dtypes[c], strict=False))
+                if dtypes[c] == 'pl.Float64': self.df_ = self.df_.with_column(pl.col(c).cast(pl.Float64, strict=False))
+                elif dtypes[c] == 'pl.Int16': self.df_ = self.df_.with_column(pl.col(c).cast(pl.Int16, strict=False))
+                else : self.df_ = self.df_.with_column(pl.col(c).cast(dtypes[c], strict=False))
 
         return self.df_
 
@@ -504,15 +506,7 @@ class PolarsBench(AbstractAlgorithm):
         :param splits number of splits, limit the number of splits
         :param col_names name of the new columns
         """
-        self.seriesDF = self.df_[column].str.split(sep, False)
-        print('ciao')
-        self.data = {}
-        self.index = 0
-        for cols in col_names:
-            print('ciao')
-            self.data[cols] = [item[self.index] for item in self.seriesDF]
-            self.index = self.index + 1
-        self.df_ = pl.DataFrame(self.data).lazy()
+        self.df_ = self.df_.with_column(pl.col(column).str.split(by=sep).alias(col_names))
         return self.df_
 
     @timing
@@ -684,7 +678,8 @@ class PolarsBench(AbstractAlgorithm):
             for col in columns:
                 self.df_ = self.df_.with_column(
                         pl.col(col).apply(
-                            lambda x: mapping[x] if x in mapping else x
+                            lambda x: mapping[x] if x in mapping else x,
+                            skip_nulls=False
                         )
                     )
         else:
