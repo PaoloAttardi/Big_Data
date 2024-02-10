@@ -40,7 +40,7 @@
                 "column": "Symbol",
                 "sep": "USDT",
                 "splits": -1,
-                "col_names": ["Token"]
+                "col_names": "Token"
             },
             "input_spark": {
                 "column": "Symbol",
@@ -52,7 +52,8 @@
         {
             "method": "groupby",
             "input": {
-                "columns": ["Token"]
+                "columns": ["Token","Date"],
+                "f":"min"
             }
         },
         {
