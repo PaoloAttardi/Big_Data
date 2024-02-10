@@ -38,6 +38,12 @@
             }            
         },
         {
+            "method": "groupby",
+            "input": {
+                "columns": ["Token"]
+            }
+        },
+        {
             "method": "force_execution",
             "input":{}
         }
