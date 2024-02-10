@@ -179,7 +179,7 @@
   },
   "crypto-market": {
     "path": "datasets/crypto-market/cryptotoken_full.csv",
-    "test": "",
+    "test": "datasets/crypto-market/pipeline_test.json",
     "pipe": "datasets/crypto-market/pipeline.json",
     "type": "csv"
   }

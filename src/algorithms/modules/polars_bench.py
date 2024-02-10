@@ -505,9 +505,11 @@ class PolarsBench(AbstractAlgorithm):
         :param col_names name of the new columns
         """
         self.seriesDF = self.df_[column].str.split(sep, False)
+        print('ciao')
         self.data = {}
         self.index = 0
         for cols in col_names:
+            print('ciao')
             self.data[cols] = [item[self.index] for item in self.seriesDF]
             self.index = self.index + 1
         self.df_ = pl.DataFrame(self.data).lazy()

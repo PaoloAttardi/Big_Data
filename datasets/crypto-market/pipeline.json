@@ -8,6 +8,17 @@
             "sep": ",",
             "assume_missing": "True",
             "dtype": "object"
+        },
+        "input_koalas": {
+            "sep": ",",
+            "assume_missing": "True"
+        },
+        "input_vaex1": {
+            "sep": ",",
+            "low_memory": "False"
+        },
+        "input_vaex": {
+            "lazy": true
         }
     }, 
     {
@@ -17,12 +28,24 @@
     "data_transformation":[
         {
             "method": "split",
+            "input_vaex1": {
+                "column": ["Symbol"],
+                "sep": "USDT",
+                "splits": 0,
+                "col_names": "Token"
+            },
+            "input_polars": {
+                "column": "Symbol",
+                "sep": "USDT",
+                "splits": -1,
+                "col_names": "Token"
+            },
             "input": {
                 "column": "Symbol",
                 "sep": "USDT",
                 "splits": "-1",
                 "col_names": "Token"
-            }
+            }            
         },
         {
             "method": "force_execution",
