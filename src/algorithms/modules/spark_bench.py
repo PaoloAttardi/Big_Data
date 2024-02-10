@@ -509,7 +509,7 @@ class SparkBench(AbstractAlgorithm):
         # use date_format to format the timestamp column as a string
         formatted = fn.date_format(timestamp, format)
         # replace the original column with the formatted column
-        self.df_ = self.df_.withColumn(column, formatted).drop(column)
+        self.df_ = self.df_.withColumn(column, formatted)
         return self.df_
 
     @timing

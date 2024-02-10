@@ -35,7 +35,19 @@
                 "sep": "USDT",
                 "splits": "-1",
                 "col_names": "Token"
-            }            
+            },
+            "input_pyspark_pandas":{
+                "column": "Symbol",
+                "sep": "USDT",
+                "splits": -1,
+                "col_names": ["Token"]
+            },
+            "input_spark": {
+                "column": "Symbol",
+                "sep": "USDT",
+                "splits": "-1",
+                "col_names": ["Token"]
+            }
         },
         {
             "method": "groupby",
@@ -95,12 +107,6 @@
             },
             "input_pandas":{
                 "columns": "Date",
-                "to_replace": ".000",
-                "value": "",
-                "regex": false
-            },
-            "input_polars":{
-                "columns": ["Date"],
                 "to_replace": ".000",
                 "value": "",
                 "regex": false

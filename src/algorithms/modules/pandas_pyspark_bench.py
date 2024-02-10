@@ -465,7 +465,7 @@ class PandasPysparkBench(AbstractAlgorithm):
         using the provided sep string as separator
         Col_names is a list of column names
         """
-        self.df_[col_names] = self.df_[column].str.split(sep, splits, expand=True)
+        self.df_[col_names] = self.df_[column].str.split(sep, splits)
         return self.df_
 
     @timing
