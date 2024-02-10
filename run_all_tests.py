@@ -20,7 +20,7 @@ algorithms = [
 
 save_output_results = False
 max_num_tests = 3
-modes = ['', '--pipeline-step', '--pipeline']   # the first is for core execution (default)
+modes = [''] #, '--pipeline-step', '--pipeline']   # the first is for core execution (default)
 
 total_nruns = len(algorithms) * len(modes) * max_num_tests
 run_cnt = 0

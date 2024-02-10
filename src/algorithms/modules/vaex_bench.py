@@ -263,10 +263,12 @@ class VaexBench(AbstractAlgorithm):
         null value in the provided column.
         :param column column to explore
         """
+        out = []
         if column == 'all':
             column = self.get_columns()
-            
-        return self.df_[self.df_[column] != self.df_[column]]
+        for col in column:
+            out.append(self.df_[self.df_[col] != self.df_[col]])
+        return out
 
     @timing
     def search_by_pattern(self, column, pattern):
@@ -596,14 +598,11 @@ class VaexBench(AbstractAlgorithm):
         :param splits number of splits, limit the number of splits
         :param col_names name of the new columns
         """
-        
-        assert type(col_names) == list, "Columns parameter must be a list" 
+         
+        df_pandas = self.df_.to_pandas_df()
+        df_pandas[col_names] = df_pandas[column].str.split(sep, splits, expand=True)
 
-        self.df_['split'] = self.df_[column].str.split(sep, splits)
-        for el in col_names:
-            self.df_[el] = (self.df_.func.split_list(self.df_['split'], col_names.index(el)))
-        
-        self.delete_columns('split')
+        self.df_ = vaex.from_pandas(df_pandas, copy_index=False)
 
         return self.df_
 

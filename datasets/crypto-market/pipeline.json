@@ -13,12 +13,8 @@
             "sep": ",",
             "assume_missing": "True"
         },
-        "input_vaex1": {
-            "sep": ",",
-            "low_memory": "False"
-        },
-        "input_vaex": {
-            "lazy": true
+        "input_vaex":{
+            "lazy":false
         }
     }, 
     {
@@ -28,12 +24,6 @@
     "data_transformation":[
         {
             "method": "split",
-            "input_vaex1": {
-                "column": ["Symbol"],
-                "sep": "USDT",
-                "splits": 0,
-                "col_names": "Token"
-            },
             "input_polars": {
                 "column": "Symbol",
                 "sep": "USDT",
