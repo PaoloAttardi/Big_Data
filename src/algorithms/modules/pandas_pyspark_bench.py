@@ -459,7 +459,7 @@ class PandasPysparkBench(AbstractAlgorithm):
         return self.df_
 
     @timing
-   def split(self, column, sep, splits, col_names):
+    def split(self, column, sep, splits, col_names):
         """
         Split the provided column into splits + 1 columns named after col_names
         using the provided sep string as separator
