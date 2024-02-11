@@ -716,7 +716,7 @@ class VaexBench(AbstractAlgorithm):
         df_pandas = self.df_.to_pandas_df()
         df_pandas=df_pandas.groupby(columns).agg(f)
 
-        self.df_ = de.Frame(df_pandas)
+        self.df_ = vaex.from_pandas(df_pandas, copy_index=False)
         return  self.df_
 
     @timing

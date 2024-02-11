@@ -121,3 +121,11 @@
 2024-02-11 18:50:06 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.FExpr' object is not iterable
 2024-02-11 18:50:34 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
 2024-02-11 18:50:36 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 19:57:27 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - name 'de' is not defined
+2024-02-11 19:57:38 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - name 'de' is not defined
+2024-02-11 19:57:50 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - name 'df' is not defined
+2024-02-11 19:57:58 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - name 'df' is not defined
+2024-02-11 19:58:21 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
+2024-02-11 19:58:28 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
+2024-02-11 19:58:48 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
+2024-02-11 19:58:55 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
