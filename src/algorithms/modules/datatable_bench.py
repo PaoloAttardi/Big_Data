@@ -492,7 +492,11 @@ class DataTableBench(AbstractAlgorithm):
         using the provided sep string as separator
         Col_names is a list of column names
         """
-        pass
+        df_pandas = self.df_.to_pandas()
+        df_pandas[col_names] = df_pandas[column].str.split(sep, splits, expand=True)
+
+        self.df_ = dt.Frame(df_pandas)
+        return self.df_
 
     @timing
     def strip(self, columns, chars):
@@ -574,7 +578,7 @@ class DataTableBench(AbstractAlgorithm):
             numeric_columns = [x for x in self.df_.names if self.df_[x].types[0] in [dt.Type.int32, dt.Type.int64, dt.Type.float32, dt.Type.float64]]
             filt = self.df_.copy()
             filt = filt[:, numeric_columns]
-            return filt[:, eval(f), dt.by(columns)]
+        return filt[:, eval(f), dt.by(columns)]
     
 
     @timing

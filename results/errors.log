@@ -1,3 +1,123 @@
 2024-01-26 13:44:29 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - PandasBench.round() got an unexpected keyword argument 'column'
 2024-01-26 13:45:04 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - PandasBench.round() got an unexpected keyword argument 'f'
 2024-01-26 13:46:50 - ERROR - dataset: crypto-market, algorithm: pandas, method: round - 'str' object cannot be interpreted as an integer
+2024-02-11 09:32:10 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:21 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:23 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:24 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:28 - ERROR - dataset: crypto-market, algorithm: polars, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:30 - ERROR - dataset: crypto-market, algorithm: polars, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:32:59 - ERROR - dataset: crypto-market, algorithm: modin_ray, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:33:25 - ERROR - dataset: crypto-market, algorithm: modin_ray, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:33:48 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:34:07 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:34:37 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 09:34:53 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:24 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:36 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:39 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:43 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:47 - ERROR - dataset: crypto-market, algorithm: polars, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:43:52 - ERROR - dataset: crypto-market, algorithm: polars, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:44:30 - ERROR - dataset: crypto-market, algorithm: modin_ray, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:45:02 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:45:43 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:47:26 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - 
+2024-02-11 11:49:03 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - 
+2024-02-11 11:55:44 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:56:15 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:58:34 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 11:59:14 - ERROR - dataset: crypto-market, algorithm: modin_dask, method: groupby - groupby() missing 1 required positional argument: 'f'
+2024-02-11 12:12:05 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'lambda x: x' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:12:20 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'lambda x: x' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:18:32 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'null' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:18:47 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'null' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:19:16 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - '' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:19:30 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - '' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:21:21 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'none' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:21:36 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'none' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:21:57 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'None' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:22:10 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'None' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:30:55 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'identity_func' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:31:07 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - 'identity_func' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:42:31 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - '0' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 12:42:45 - ERROR - dataset: crypto-market, algorithm: pandas, method: groupby - '0' is not a valid function for 'DataFrameGroupBy' object
+2024-02-11 13:05:48 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:05:52 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:15:13 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:15:18 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:24:46 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:24:48 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:26:33 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:26:35 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:28:33 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - 
+2024-02-11 13:29:54 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - 
+2024-02-11 13:31:16 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 13:31:19 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 13:50:59 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 13:51:00 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 13:51:48 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:51:49 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - An object of type <class 'builtin_function_or_method'> cannot be used in an FExpr
+2024-02-11 13:54:12 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 13:54:13 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 14:03:40 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - 'str' object has no attribute 'items'
+2024-02-11 14:04:28 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - 'str' object has no attribute 'items'
+2024-02-11 14:18:33 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - 'str' object has no attribute 'items'
+2024-02-11 14:20:23 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-11 14:24:40 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 14:25:41 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 14:31:04 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 14:32:16 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 16:57:12 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 16:58:39 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: cast_columns_types - [Errno 111] Connection refused
+2024-02-11 17:02:10 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - Type object was not understood.
+2024-02-11 17:02:45 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - Type object was not understood.
+2024-02-11 17:05:56 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 17:17:05 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - Could not find a class (AggMin_string), seems string is not supported
+2024-02-11 17:17:11 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - Could not find a class (AggMin_string), seems string is not supported
+2024-02-11 17:17:49 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - Could not find a class (AggMin_string), seems string is not supported
+2024-02-11 17:17:54 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - Could not find a class (AggMin_string), seems string is not supported
+2024-02-11 17:31:27 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() got an unexpected keyword argument 'agg'
+2024-02-11 17:31:32 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() got an unexpected keyword argument 'agg'
+2024-02-11 17:45:18 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() got an unexpected keyword argument 'agg'
+2024-02-11 17:45:33 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - groupby() got an unexpected keyword argument 'agg'
+2024-02-11 17:46:00 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - No axis named min for object type DataFrame
+2024-02-11 17:46:14 - ERROR - dataset: crypto-market, algorithm: vaex, method: groupby - No axis named min for object type DataFrame
+2024-02-11 17:47:19 - ERROR - dataset: crypto-market, algorithm: vaex, method: change_date_time_format - Column or variable 'Date' does not exist.
+2024-02-11 17:47:30 - ERROR - dataset: crypto-market, algorithm: vaex, method: change_date_time_format - Column or variable 'Date' does not exist.
+2024-02-11 17:48:57 - ERROR - dataset: crypto-market, algorithm: vaex, method: change_date_time_format - Column or variable 'Date' does not exist.
+2024-02-11 17:49:12 - ERROR - dataset: crypto-market, algorithm: vaex, method: change_date_time_format - Column or variable 'Date' does not exist.
+2024-02-11 17:59:00 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 17:59:05 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:00:53 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:00:57 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:02:45 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'to_pandas_df'
+2024-02-11 18:02:49 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'to_pandas_df'
+2024-02-11 18:03:41 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:03:48 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:04:23 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'to_pandas_df'
+2024-02-11 18:04:26 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'to_pandas_df'
+2024-02-11 18:04:41 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:04:45 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:07:47 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: groupby - [Errno 111] Connection refused
+2024-02-11 18:13:10 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-11 18:17:38 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - eval() arg 1 must be a string, bytes or code object
+2024-02-11 18:17:41 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - eval() arg 1 must be a string, bytes or code object
+2024-02-11 18:19:05 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 18:19:07 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 18:28:15 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'DataTableBench' object has no attribute 'get_aggregation_function'
+2024-02-11 18:28:20 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'DataTableBench' object has no attribute 'get_aggregation_function'
+2024-02-11 18:31:48 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'groupby'
+2024-02-11 18:31:49 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'groupby'
+2024-02-11 18:40:00 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'groupby'
+2024-02-11 18:40:03 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.Frame' object has no attribute 'groupby'
+2024-02-11 18:40:30 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:40:34 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:40:57 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:41:03 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:44:46 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:44:49 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'Token'
+2024-02-11 18:50:03 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.FExpr' object is not iterable
+2024-02-11 18:50:06 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - 'datatable.FExpr' object is not iterable
+2024-02-11 18:50:34 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?
+2024-02-11 18:50:36 - ERROR - dataset: crypto-market, algorithm: datatable, method: groupby - Column Token does not exist in the Frame; did you mean Open?

@@ -52,8 +52,14 @@
         {
             "method": "groupby",
             "input": {
-                "columns": ["Token","Date"],
-                "f":"min"
+                "columns": ["Token"],
+                "f":{
+                    "Date": "min"
+                }
+            },
+            "input_datatable": {
+                "columns": ["Token"],
+                "f":"dt.min(dt.f['Date'])"
             }
         },
         {

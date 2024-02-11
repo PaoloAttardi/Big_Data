@@ -459,14 +459,14 @@ class PandasPysparkBench(AbstractAlgorithm):
         return self.df_
 
     @timing
-    def split(self, column, sep, splits, col_names):
+   def split(self, column, sep, splits, col_names):
         """
         Split the provided column into splits + 1 columns named after col_names
         using the provided sep string as separator
         Col_names is a list of column names
         """
         self.df_[col_names] = self.df_[column].str.split(sep, splits)
-        return self.df_
+        return self.df_ 
 
     @timing
     def strip(self, columns, chars):
@@ -540,16 +540,11 @@ class PandasPysparkBench(AbstractAlgorithm):
         return self.df_  
     
     @timing
-    def groupby(self, columns, f, cast=None):
+    def groupby(self, columns, f):
         """
         Aggregate the dataframe by the provided columns
         then applies the function f on every group
         """
-        if cast is None:
-            cast = {}
-        if cast:
-            for column, t in cast.items():
-                self.df_[column] = self.df_[column].astype(t)
                 
         return self.df_.groupby(columns).agg(f)
     

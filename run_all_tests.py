@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 algorithms = [
     'pandas',
     'datatable', 

@@ -713,8 +713,11 @@ class VaexBench(AbstractAlgorithm):
         :param columns columns to use for group by
         :param f aggregation function
         """
-        
-        return  self.df_.groupby(columns, agg=f)
+        df_pandas = self.df_.to_pandas_df()
+        df_pandas=df_pandas.groupby(columns).agg(f)
+
+        self.df_ = de.Frame(df_pandas)
+        return  self.df_
 
     @timing
     def categorical_encoding(self, columns):
