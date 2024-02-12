@@ -162,8 +162,7 @@ class VaexBench(AbstractAlgorithm):
         :param columns columns to use for sorting
         :param ascending if sets to False sorts in descending order (default True)
         """
-        
-        self.df_ = self.df_.sort(columns, ascending = ascending)
+        self.df_ = self.df_.sort(columns[0], ascending = ascending)
         
         return self.df_
 
@@ -317,7 +316,6 @@ class VaexBench(AbstractAlgorithm):
         :param dtypes a dictionary that provides for ech column to cast the new datatype
         For example  {'col_name': 'int8'}
         """
-
         assert type(dtypes) == dict, "dtypes parameter must be a dict, formatted like {'col_name': 'type'} "
         for col, dtype in dtypes.items():
             if str(self.df_[col].dtype) == 'time32[s]':
@@ -411,28 +409,15 @@ class VaexBench(AbstractAlgorithm):
         :param column column to format
         :param str_date_time_format datetime formatting string
         """
-        #from datetime import datetime
+        from datetime import datetime
         # converting col to pandas
-        #pandas_df = self.df_.to_pandas_df()
+        pandas_df = self.df_.to_pandas_df()
         # converting col to datetime
-        #print("Warning: change_date_time_format is not implemented for this backend, falling back to pandas")
+        print("Warning: change_date_time_format is not implemented for this backend, falling back to pandas")
         
-        # column_values = self.df_[column].astype(str).values
-        # formatted_values = []
-        # for v in column_values:
-        #     if v in ['NaT', 'nan', '', None]:
-        #         formatted_values.append(None)
-        #     else:
-        #         formatted_values.append(datetime.datetime.strptime(str(v), format))
-        # print(formatted_values)
-        from dateutil import parser
-        
-        
-        self.df_[column] = self.df_[column].apply(lambda x: parser.parse(str(x)) if x not in ['NaT', 'nan', '', None] else '')
-        # port to string with the new format
-        self.df_[column] = self.df_[column].apply(lambda x: x.strftime(format) if x not in ['NaT', 'nan', '', None] else '')
-        #pandas_df[column] = pd.to_datetime(pandas_df[column], errors='ignore', format=format)
-        #self.df_ = vx.from_pandas(pandas_df)
+        formatted_values = pd.to_datetime(pandas_df[column], errors='coerce', format=format)
+        pandas_df[column] = formatted_values
+        self.df_ = vx.from_pandas(pandas_df)
         return self.df_
         
         
@@ -716,7 +701,7 @@ class VaexBench(AbstractAlgorithm):
         df_pandas = self.df_.to_pandas_df()
         df_pandas=df_pandas.groupby(columns).agg(f)
 
-        self.df_ = vaex.from_pandas(df_pandas, copy_index=False)
+        # self.df_ = vaex.from_pandas(df_pandas, copy_index=False)
         return  self.df_
 
     @timing

@@ -19,7 +19,7 @@ algorithms = [
 
 save_output_results = False
 max_num_tests = 2
-modes = [''] #, '--pipeline-step', '--pipeline']   # the first is for core execution (default)
+modes = ['', '--pipeline-step', '--pipeline']   # the first is for core execution (default)
 
 total_nruns = len(algorithms) * len(modes) * max_num_tests
 run_cnt = 0
@@ -37,11 +37,11 @@ for mode in modes:
 
             run_cnt += 1
 
-            if save_output_results:
+            """if save_output_results:
                 if algorithm == 'modin_ray':
                     os.rename('pipeline_output/modin_loan_output.csv', 'pipeline_output/modin_ray_output.csv')
                 if os.path.exists(f'pipeline_output/q{part}'):
                     os.system(f'rm -rf pipeline_output/q{part}')
 
                 os.mkdir(f'pipeline_output/q{part}')
-                os.system(f'mv pipeline_output/*.csv pipeline_output/q{part}')
+                os.system(f'mv pipeline_output/*.csv pipeline_output/q{part}')"""

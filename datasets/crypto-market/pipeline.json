@@ -144,6 +144,22 @@
             }
         },
         {
+            "method": "sort",
+            "input": {
+                "columns": [
+                    "Date"
+                ]
+            },
+            "input_dask": {
+                "columns": [
+                    "Date"
+                ],
+                "cast": {
+                    "Date": "datetime"
+                }
+            }
+        },
+        {
             "method": "force_execution",
             "input":{}
         }
