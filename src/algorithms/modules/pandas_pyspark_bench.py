@@ -76,7 +76,7 @@ class PandasPysparkBench(AbstractAlgorithm):
         format = ds.dataset_attribute.type
         
         if format == "csv":
-            self.df_ = self.read_csv(path, **kwargs)
+            self.df_ = self.read_csv(path, nrows=5000, **kwargs)
         elif format == "excel":
             self.df_ = self.read_excel(path, **kwargs)
         elif format == "json":
