@@ -1,7 +1,7 @@
 import os
 import sys
 
-algorithms = [
+'''algorithms = [
     'pandas',
     'datatable', 
     'polars', 
@@ -10,7 +10,8 @@ algorithms = [
     'pyspark_pandas', 
     'spark', 
     'vaex'
-]
+]'''
+algorithms = ['pyspark_pandas']
 
 # parts = ['1', '2', '3', '4']
 
@@ -18,7 +19,7 @@ algorithms = [
 # parts = parts[:4]
 
 save_output_results = False
-max_num_tests = 2
+max_num_tests = 10
 modes = ['', '--pipeline-step', '--pipeline']   # the first is for core execution (default)
 
 total_nruns = len(algorithms) * len(modes) * max_num_tests
@@ -33,7 +34,7 @@ for mode in modes:
         for i in range(max_num_tests):
             perc = run_cnt / total_nruns * 100
             print(f'==================== algorithm {algorithm} - mode {mode if mode else "core"} - test {i + 1} - completed {format(perc, ".2f")}% ===============================')
-            os.system(f'python run_algorithm.py --algorithm {algorithm} --dataset crypto-market --locally {mode}')
+            os.system(f'python run_algorithm.py --algorithm {algorithm} --dataset crypto-market --locally {mode} --mem-limit 6')
 
             run_cnt += 1
 

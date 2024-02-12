@@ -129,3 +129,8 @@
 2024-02-11 19:58:28 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
 2024-02-11 19:58:48 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
 2024-02-11 19:58:55 - ERROR - dataset: crypto-market, algorithm: vaex, method: cast_columns_types - invalid syntax (<unknown>, line 1)
+2024-02-12 16:15:36 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-12 16:16:39 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-12 16:17:49 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-12 16:18:55 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
+2024-02-12 16:21:31 - ERROR - dataset: crypto-market, algorithm: pyspark_pandas, method: split - [Errno 111] Connection refused
